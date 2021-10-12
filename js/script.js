@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function showCart(){
     let products_incart = document.querySelector('.products-incart');
     let cart_no = document.querySelector('.cart_no');
-    let imgPath = '../images/';
+    let imgPath = 'images/';
     products_incart.innerHTML = '';
   //  console.log('in side  show cart function');cart_no
     let sorted2 = CART.sort2('qty');
@@ -286,7 +286,7 @@ function decrementCart(ev){
 
 function getProducts(success, failure){
     //request the list of products from the "server"
-    const URL = "./products-1.json?";
+    const URL = "products-1.json?";
     fetch(URL, {
         method: 'GET',
         mode: 'cors'
@@ -301,7 +301,7 @@ function getProducts(success, failure){
 function showProducts( products ){
     PRODUCTS = products;
     //take data.products and display inside <section id="products">
-    let imgPath = '../images/';
+    let imgPath = 'images/';
     let box_container = document.querySelector('.box-container');
     box_container.innerHTML = "";
     products.forEach(product=>{
